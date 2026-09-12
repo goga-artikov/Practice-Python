@@ -25,3 +25,18 @@ print("result1:", result1)
 
 result2 = greeting('Artikov')
 print("result2:", result2)
+
+
+print("======= keyword and default arguments =========")
+
+# define 
+def give_greet(name, age):
+    print ("give_greet is executed")
+    return f"Hi, {name}! You are {age} years old."
+
+# call
+result3 = give_greet(name="Goga", age=30) # keyword arguments
+print("result3:", result3)
+
+result4 = give_greet("John", 23)
+print("result4:", result4)
