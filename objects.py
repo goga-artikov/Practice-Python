@@ -26,3 +26,14 @@ print(result1)
 
 result2 = ceil(14.5)  # called method of math object
 print(result2)
+
+print("======= Error Handling system =========")
+car_dict = dict(name="BMW", model="X5", year=2020, electric=True)
+try:
+    print("passed here")
+    result = car_dict["origin"]
+    print("result:", result)
+except Exception as err:
+    print("Error:", err)
+finally:
+    print("Final closing logic")
