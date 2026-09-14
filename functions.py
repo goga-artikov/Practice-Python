@@ -12,12 +12,15 @@ print("======= define vs call =========")
 
 # define - build - parameters
 
+
 def greet(a):
     print(f"How do you do, {a}?")
+
 
 def greeting(b):
     print(f"greeting is executed")
     return f"Hello, {b}!"
+
 
 # call - execute
 result1 = greet('Goga')
@@ -29,25 +32,39 @@ print("result2:", result2)
 
 print("======= keyword and default arguments =========")
 
-# define 
+# define
+
+
 def give_greet(name, age):
-    print ("give_greet is executed")
+    print("give_greet is executed")
     return f"Hi, {name}! You are {age} years old."
 
+
 # call
-result3 = give_greet(name="Goga", age=30) # keyword arguments
+result3 = give_greet(name="Goga", age=30)  # keyword arguments
 print("result3:", result3)
 
 result4 = give_greet("John", 23)
 print("result4:", result4)
 
+
+def give_greeting(name, age=18):   # age uchun standart qiymat
+    return f"Hi, {name}! You are {age} years old."
+
+
+give_greeting("Ali")  # age ko'rsatilmasa ham ishlayveradi -> 18
+print("result5:", give_greeting("Ali"))
+
 print("======= scope =========")
 b = 100
 
 # define
+
+
 def calculate(a, b):
-    c= a + b
+    c = a + b
     print(f"the c value is: {c}")
+
 
 # call
 calculate(5, 50)
